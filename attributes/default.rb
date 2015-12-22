@@ -31,3 +31,5 @@ default["s3fs"]["data"] = {
   "access_key_id" => "",
   "secret_access_key" => "",
 }
+
+default["s3fs"]["fuse"]["source_url"] = "https://s3.amazonaws.com/grovo-public/fuse-2.8.7.tar.gz"

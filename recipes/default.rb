@@ -24,7 +24,7 @@ end
 if not node['s3fs']['packages'].include?("fuse")
   # install fuse
   remote_file "#{Chef::Config[:file_cache_path]}/fuse-#{ node['fuse']['version'] }.tar.gz" do
-    source "http://heanet.dl.sourceforge.net/project/fuse/fuse-2.X/#{ node['fuse']['version'] }/fuse-#{ node['fuse']['version'] }.tar.gz"
+    source node['s3fs']['fuse']['source_url']
     mode 0644
     action :create_if_missing
   end
